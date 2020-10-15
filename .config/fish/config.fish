@@ -27,3 +27,5 @@ end
 set  project "Terminal"
 set entity (echo $history[1] | cut -d ' ' -f1)
 wakatime --write --plugin "fish-wakatime/0.0.1" --entity-type app --project "$project" --entity "$entity" 2>&1 > /dev/null&
+colorscript -r
+set fish_greeting
