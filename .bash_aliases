@@ -8,6 +8,10 @@ export VISUAL='nvim'
 
 export PATH=/snap/bin:$PATH
 export PATH=~/.emacs.d/bin:$PATH
+
+OSH_THEME="bobby"
+plugins=(git battery npm progress)
+
 # wakatime for bash
 # hook function to send wakatime a tick
 pre_prompt_command() {
