@@ -51,4 +51,10 @@
 (package! wakatime-mode)
 
 (use-package! wakatime-mode
-:hook (after-init . global-wakatime-mode))
+  :hook (after-init . global-wakatime-mode))
+
+(package! doom-modeline)
+
+(use-package doom-modeline
+  :ensure t
+  :hook (after-init . doom-modeline-mode))
