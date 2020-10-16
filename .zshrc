@@ -130,6 +130,7 @@ export VISUAL='nvim'
 
 export PATH=/snap/bin:$PATH
 export PATH=~/.emacs.d/bin:$PATH
+export PATH=~/.cargo/bin:$PATH
 
 if [ -s "/usr/share/terminfo/x/xterm-kitty" ]; then
 	alias tput='tput -T xterm'

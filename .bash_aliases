@@ -8,6 +8,7 @@ export VISUAL='nvim'
 
 export PATH=/snap/bin:$PATH
 export PATH=~/.emacs.d/bin:$PATH
+export PATH=~/.cargo/bin:$PATH
 
 OSH_THEME="bobby"
 plugins=(git battery npm progress)
