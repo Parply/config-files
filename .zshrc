@@ -123,6 +123,7 @@ source $(dirname $(gem which colorls))/tab_complete.sh
 
 alias lc='colorls -lA --sd'
 alias config='/usr/bin/git --git-dir=$HOME/config-files/ --work-tree=$HOME'
+alias cat="batcat"
 
 export EDITOR='nvim'
 
