@@ -1,6 +1,11 @@
+### STARTUP
+
 #neofetch
 #cat ~/config-files/giraffe.txt | lolcat
 colorscript -r # https://gitlab.com/dwt1/shell-color-scripts
+
+### POWERLEVEL10K and OH MY ZSH
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -121,9 +126,47 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source $(dirname $(gem which colorls))/tab_complete.sh
 
+### ALIASES
+
+# ls
 alias lc='colorls -lA --sd'
+alias ls='ls --color=auto'
+
+# grep
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+# interactive
+alias cp='cp -i'
+alias rm='rm -i'
+alias mv='mv -i'
+
+# navigation
+alias ..='cd ..' 
+alias ...='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+
+# vim
+alias vim="nvim"
+alias vi="nvim"
+
+# git
+alias g="git"
+
+# dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/config-files/ --work-tree=$HOME'
+
+#bat
 alias cat="batcat"
+
+# the terminal rickroll
+alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+
+### EXPORT
+export MANPAGER="/bin/sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist noma ' -\""
 
 export EDITOR='nvim'
 
@@ -136,6 +179,33 @@ export PATH=~/.cargo/bin:$PATH
 if [ -s "/usr/share/terminfo/x/xterm-kitty" ]; then
 	alias tput='tput -T xterm'
 fi
+
+### ARCHIVE EXTRACTION
+# usage: ex <file>
+ex ()
+{
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1   ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *.deb)       ar x $1      ;;
+      *.tar.xz)    tar xf $1    ;;
+      *.tar.zst)   unzstd $1    ;;      
+      *)           echo "'$1' cannot be extracted via ex()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

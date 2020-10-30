@@ -25,10 +25,27 @@ Plug 'edkolev/promptline.vim'
 Plug 'jreybert/vimagit'
 Plug 'chrisbra/csv.vim'
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'Yggdroot/indentLine'
 call plug#end()
 
-" instant markdown
+" tab
+set expandtab
+set shiftwidth=4
 
+set termguicolors
+
+set ignorecase
+set smartcase
+
+set hlsearch
+set incsearch
+
+set autoindent
+
+" instant markdown
 let g:instant_markdown_mathjax = 1
 
 " wakatime
@@ -98,8 +115,10 @@ au FileType c,cpp,onjc,objcpp,python,R call rainbow#load()
 
 command! -nargs=0 Prettier :call CocAction('runCommand','prettier.formatFile')
 " NerdTree
+let NERDTreeShowHidden=1
+map <C-n> :NERDTreeToggle<CR>
 
-autocmd VimEnter * NERDTree
+"autocmd VimEnter * NERDTree
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
