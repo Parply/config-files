@@ -30,7 +30,15 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'Yggdroot/indentLine'
 Plug 'dag/vim-fish'
+Plug 'mcchrish/nnn.vim'
+Plug 'voldikss/vim-floaterm'
+Plug 'airblade/vim-rooter'
 call plug#end()
+
+" source
+
+source $HOME/.config/nvim/plug-config/floaterm.vim
+source $HOME/.config/nvim/plug-config/fzf.vim
 
 " tab
 set expandtab
@@ -110,14 +118,14 @@ colorscheme onedark
 
 
 " Enable rainbow brackets
-au FileType c,cpp,onjc,objcpp,python,R call rainbow#load()
+au FileType h,hpp,c,cpp,objc,objcpp,python,R call rainbow#load()
 "let g:rainbow_active = 1
 " prettier
 
 command! -nargs=0 Prettier :call CocAction('runCommand','prettier.formatFile')
 " NerdTree
 let NERDTreeShowHidden=1
-map <C-f> :NERDTreeToggle<CR>
+map <C-w> :NERDTreeToggle<CR>
 
 "autocmd VimEnter * NERDTree
 

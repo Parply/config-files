@@ -162,6 +162,12 @@ alias config='/usr/bin/git --git-dir=$HOME/config-files/ --work-tree=$HOME'
 #bat
 alias cat="batcat"
 
+# lazydocker
+alias lzd="lazydocker"
+
+# lazygit
+alias lzg="lazygit"
+
 # the terminal rickroll
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
@@ -175,6 +181,7 @@ export VISUAL='nvim'
 export PATH=/snap/bin:$PATH
 export PATH=~/.emacs.d/bin:$PATH
 export PATH=~/.cargo/bin:$PATH
+export PATH=~/go/bin:$PATH
 
 if [ -s "/usr/share/terminfo/x/xterm-kitty" ]; then
 	alias tput='tput -T xterm'
