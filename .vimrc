@@ -29,6 +29,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'Yggdroot/indentLine'
+Plug 'dag/vim-fish'
 call plug#end()
 
 " tab
@@ -116,7 +117,7 @@ au FileType c,cpp,onjc,objcpp,python,R call rainbow#load()
 command! -nargs=0 Prettier :call CocAction('runCommand','prettier.formatFile')
 " NerdTree
 let NERDTreeShowHidden=1
-map <C-n> :NERDTreeToggle<CR>
+map <C-f> :NERDTreeToggle<CR>
 
 "autocmd VimEnter * NERDTree
 

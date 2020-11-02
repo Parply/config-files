@@ -94,7 +94,10 @@ ex ()
   fi
 }
 
+# FZF
 
+source ~/fzf/completion.bash
+source ~/fzf/key-bindings.bash
 
 # wakatime for bash
 # hook function to send wakatime a tick

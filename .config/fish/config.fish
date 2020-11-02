@@ -15,6 +15,9 @@ funcsave config
 set -Ux EDITOR nvim
 set -Ux VISUAL vim
 
+# FZF
+source ~/fzf/key-bindings.fish
+
 # wakatime for fish
 # hook function to send wakatime a tick
 
