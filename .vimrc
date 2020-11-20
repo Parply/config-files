@@ -6,7 +6,8 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'vifm/vifm.vim'
 Plug 'joshdick/onedark.vim'
-Plug 'ap/vim-css-color'
+Plug 'norcalli/nvim-colorizer.lua'
+Plug 'kevinhwang91/rnvimr'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
@@ -39,6 +40,15 @@ call plug#end()
 
 source $HOME/.config/nvim/plug-config/floaterm.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
+
+" colorizer
+lua require'colorizer'.setup()
+
+" ranger float
+
+tnoremap <silent> <M-i> <C-\><C-n>:RnvimrResize<CR>
+nnoremap <silent> <M-o> :RnvimrToggle<CR>
+tnoremap <silent> <M-o> <C-\><C-n>:RnvimrToggle<CR>
 
 " tab
 set expandtab
