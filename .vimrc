@@ -7,7 +7,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'vifm/vifm.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'norcalli/nvim-colorizer.lua'
-Plug 'kevinhwang91/rnvimr'
+Plug 'kevinhwang91/rnvimr', {'branch': 'main'}
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
@@ -40,9 +40,6 @@ call plug#end()
 
 source $HOME/.config/nvim/plug-config/floaterm.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
-
-" colorizer
-lua require'colorizer'.setup()
 
 " ranger float
 
