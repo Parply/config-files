@@ -1,3 +1,4 @@
+set nocompatible
 " PLUGINS
 call plug#begin()
 Plug 'vim-airline/vim-airline'
@@ -5,6 +6,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'vifm/vifm.vim'
+Plug 'sheerun/vim-polyglot'
 Plug 'joshdick/onedark.vim'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'kevinhwang91/rnvimr', {'branch': 'main'}
@@ -33,6 +35,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'dag/vim-fish'
 Plug 'mcchrish/nnn.vim'
 Plug 'voldikss/vim-floaterm'
+Plug 'StanAngeloff/php.vim'
 Plug 'airblade/vim-rooter'
 call plug#end()
 
@@ -52,6 +55,8 @@ set expandtab
 set shiftwidth=4
 
 set termguicolors
+
+
 
 set ignorecase
 set smartcase
@@ -122,7 +127,6 @@ if (has("autocmd"))
 endif
 
 colorscheme onedark
-
 
 " Enable rainbow brackets
 au FileType h,hpp,c,cpp,objc,objcpp,python,R call rainbow#load()
